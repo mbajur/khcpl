@@ -1,0 +1,35 @@
+<table class="table table-hover table-striped">
+  <thead>
+    <th>Name</th>
+    <th>Facebook ID</th>
+    <th>Crawled at</th>
+  </thead>
+
+  <%= for event <- @events do %>
+    <tr>
+      <td><%= event.name %></td>
+      <td><%= event.facebook_id %></td>
+      <td><%= event.crawled_at %></td>
+    </tr>
+  <% end %>
+</table>
+
+<hr>
+
+<table class="table table-hover table-striped">
+  <thead>
+    <th>Photo</th>
+    <th>Name</th>
+    <th>Location</th>
+  </thead>
+
+  <%= for band <- @bands do %>
+    <tr>
+      <td>
+        <img src="<%= band.photo_url %>" width="100"/></td>
+      <td><%= band.name %></td>
+      <td><%= band.location %></td>
+      <td><%= band.crawled_at %></td>
+    </tr>
+  <% end %>
+</table>
